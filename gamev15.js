@@ -71,18 +71,18 @@ this.xDr = (this.object.rotation.y % Math.PI2).round(3);
 var i=n.getAngleDist(this.object.rotation.y,this.target.yD);this.object.rotation.y+=i*e*s.camChaseTrn,i=n.getAngleDist(c.pitchObject.rotation.x,this.target.xD),this.pitchObject.rotation.x+=i*e*s.camChaseTrn,i=n.getDistance3D(this.object.position.x,this.object.position.y,this.object.position.z,this.target.x,this.target.y,this.target.z)*e*s.camChaseSpd;var r=n.getDirection(this.object.position.z,this.object.position.x,this.target.z,this.target.x),o=n.getXDir(this.object.position.x,this.object.position.y,this.object.position.z,this.target.x,this.target.y,this.target.z);this.object.position.x-=i*Math.sin(r)*Math.cos(o),this.object.position.y+=i*Math.sin(o),this.object.position.z-=i*Math.cos(r)*Math.cos(o),t.updateFrustum()}},this.camLookAt=window.camLookAt=function(t,e,i){var r=n.getXDir(this.object.position.x,this.object.position.y,this.object.position.z,t,e,i),o=n.getDirection(this.object.position.z,this.object.position.x,i,t);this.target={xD:r,yD:o,x:t+s.camChaseDst*Math.sin(o)*Math.cos(r),y:e-s.camChaseDst*Math.sin(r),z:i+s.camChaseDst*Math.cos(o)*Math.cos(r)}},this.moveCam=function(e,i,n){c.object.position.set(e,i,n),t.camera.updateProjectionMatrix(),t.updateFrustum()},this.rotateCam=function(e,i,n){t.camera.rotation.y=e,t.camera.rotation.x=i,t.camera.rotation.z=n},this.jumpKey=parseInt(getSavedVal("cont_jumpKey")||32),this.crouchKey=parseInt(getSavedVal("cont_crouchKey")||16),this.swapKeyD=parseInt(getSavedVal("cont_swapKeyD")||81),this.swapKeyU=parseInt(getSavedVal("cont_swapKeyU")||69),this.reloadKey=parseInt(getSavedVal("cont_reloadKey")||82),this.sprayKey=parseInt(getSavedVal("cont_sprayKey")||70),this.aimKey=parseInt(getSavedVal("cont_aimKey")||67),this.chatKey=parseInt(getSavedVal("cont_chatKey")||13),this.voiceKey=parseInt(getSavedVal("cont_voiceKey")||86),this.recordKey=parseInt(getSavedVal("cont_recordKey")||84),this.moveKeys=[parseInt(getSavedVal("cont_0")||87),parseInt(getSavedVal("cont_1")||83),parseInt(getSavedVal("cont_2")||65),parseInt(getSavedVal("cont_3")||68)],this.moveDirs=[[0,-1],[0,1],[-1,0],[1,0]],this.updateMoveDir=function(){for(var t=0,e=0,i=0;i<c.moveKeys.length;++i)c.keys[c.moveKeys[i]]&&(t+=c.moveDirs[i][0],e+=c.moveDirs[i][1]);this.moveDir=0==t&&0==e?null:Math.atan2(e,t)},window.addEventListener("keydown",function(t){(t.which||t.keyCode)==c.chatKey?window.pressButton(t.which||t.keyCode):document.activeElement!=chatInput&&(c.enabled&&t.preventDefault(),a(t.which||t.keyCode||0,1))},!1),window.addEventListener("keyup", function(t) {
 if (document.activeElement != chatInput) {
 if (false) {
-window.mdlsettingsmain.autoaim += 1;
+
 var aoptions = ["Off", "Quickscoper", "Manual"];
 window.Ze("Autoaim", `Changed to ${ aoptions[window.mdlsettingsmain.autoaim%3] }`)
 }
 
 if (false) {
-window.mdlsettingsmain.bhop = !window.mdlsettingsmain.bhop;
+
 window.Ze("BHop", `Changed to ${ window.mdlsettingsmain.bhop ? "on" : "off" }`)
 }
 
 if (false) {
-window.mdlsettingsmain.info = !window.mdlsettingsmain.info;
+
 window.Ze("Player Info", `Changed to ${ window.mdlsettingsmain.info ? "on" : "off" }`)
 if (!window.mdlsettingsmain.info) {
 for (let playerInfo of playerInfos.children){
