@@ -50,7 +50,7 @@ function t(){if(!(this instanceof t))return new t})},function(t,e,i){var n=i(2);
                     clearInterval(itv);
 
                     }, 300);
-
+                byebtn.style.display = "none";
                 document.addEventListener("click", (e) => {
                                 if (e.target.id == "byebtn"){
                                
