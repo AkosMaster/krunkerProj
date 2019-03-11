@@ -20,6 +20,7 @@
 // ==/UserScript==
 
 
+
 function invertM(e) {
  if (e == "/ Type: Manual ") {
   return("/ Type: Quickscope ");
